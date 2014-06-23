@@ -2,7 +2,7 @@ Starting a new Dev project - Setup guide
 
 Follow these steps to setup your new LAMP development project:
 
-    1. Download virtualBox for your platform from here
+    1. Download virtualBox for your platform from here. 
         On *nix systems (Mac OSX, Linux, etc), you will need to modify your .bash_profile (or .zsh_profile) to extend your $PATH variable: 
     PATH=$PATH:/Applications/VirtualBox.app/Contents/MacOS/
     export PATH
