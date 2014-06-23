@@ -2,14 +2,15 @@ Starting a new Dev project - Setup guide
 
 Follow these steps to setup your new LAMP development project:
 
-    1. Download virtualBox for your platform from here. 
-        On *nix systems (Mac OSX, Linux, etc), you will need to modify your .bash_profile (or .zsh_profile) to extend your $PATH variable: 
+    1. Download virtualBox for your platform from here https://www.virtualbox.org/wiki/Downloads. 
+    
+    On *nix systems (Mac OSX, Linux, etc), you will need to modify your .bash_profile (or .zsh_profile) to extend your        $PATH variable: 
     PATH=$PATH:/Applications/VirtualBox.app/Contents/MacOS/
     export PATH
 
-    2. Download vagrant for your platform from here
-        On *nix systems (Mac OSX, Linux, etc), you will need to use "wget" command to get the file and then install it.
-        For example, you will need to: 
+    2. Download vagrant for your platform from here https://www.vagrantup.com/downloads.html
+    On *nix systems (Mac OSX, Linux, etc), you will need to use "wget" command to get the file and then install it.
+    For example, you will need to: 
    $$ ####CentOS
    $$ cd /tmp
    $$ sudo wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.rpm
@@ -19,7 +20,7 @@ Follow these steps to setup your new LAMP development project:
    $$ sudo wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
    $$ dpkg -i vagrant_1.6.3_x86_64.deb
 
-    3. There is a list of available virtualbox instances you can choose from here. For this example i am choosing an Ubuntu 12.04 box and provisioning it with the latest apache,mysql and php: 
+    3. There is a list of available virtualbox instances you can choose from here http://www.vagrantbox.es/. For this example i am choosing an Ubuntu 12.04 box and provisioning it with the latest apache,mysql and php: 
 
    $$ git clone git@box64.int.nyulaw.me:infrastructure/vagrant-lamp-with-salt.git
    $$ ####Do "git checkout hyperv" after you clone for the hyperv setup
