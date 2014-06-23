@@ -13,7 +13,6 @@
      * On *nix systems (Mac OSX, Linux, etc), you will need to use "wget" command to get the file and then install it.
      For example, you will need to:
 
-
     > ####CentOS
     > cd /tmp
     > sudo wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.rpm
@@ -27,7 +26,7 @@
 
     > git clone git@box64.int.nyulaw.me:infrastructure/vagrant-lamp-with-salt.git
     > ####Do "git checkout hyperv" after you clone for the hyperv setup
-    > ####Just note that on hyperv, NAT is not supported and you need to choose external in network settings, and then    register your ip address
+    > ####Just note that on hyperv, NAT is not supported and you need to choose external in network settings.
     > cd vagrant-lamp-with-salt
     > vagrant plugin install vagrant-salt
     > ####If you get are on windows and you get the error :   H:/ <errno::ENOENT>
@@ -40,4 +39,4 @@
     4. Your box is now running. You can get into this instance to do your own configuration, via SSH:
     > vagrant ssh
 
-Go to http://localhost:8080 and you should see the apache webserver default page, and also the phpinfo page: http://localhost:8080/phpinfo.php
+##### Go to http://localhost:8080 and you should see the apache webserver default page, and also the phpinfo page: http://localhost:8080/phpinfo.php
