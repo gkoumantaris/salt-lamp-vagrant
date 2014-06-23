@@ -22,8 +22,8 @@ To provision your Vagrant LAMP server, clone this repo and run `$ vagrant up` in
 the same directory.
 
 Salt will install the most current versions of Apache, PHP and MySQL. Vagrant
-will open up port 8080. Salt will also install a full version of Vim on your
-server to allow for editing.
+will open up port 8080 on your machine to check your project by visiting http://localhost:8080.
+Salt will also install a full version of Vim on your server to allow for editing directly on the box.
 
 ## Please Note
 
@@ -31,14 +31,10 @@ This provisioning currently installs MySQL without a root user password.
 
 This provisioning allows for you to make changes to the
 `/salt/roots/salt/apache2.conf` file and will permeate that through to your
-server with a `$ salt-call state.highstate` on your guest machine.
+server with a `$ salt-call state.highstate` on your guest machine. Also there is the web directory
+`/www/projects` that corresponds to the default webroot of your server (/var/www/), there is the index.html file and the phpinfo.php file inside. You can create 
+your project in that directory and work on it from your preferred windows IDE.
 
-Lastly, I have found that the `salt.run_highstate = true` configuration in the
-Vagrantfile occasionally hangs. If this happens, `ctrl-c` during this part of
-the Vagrant build process and run:
-
-`$ vagrant ssh`  
-`$ salt-call state.highstate`
-
-to be sure that your guest machine has indeed run the Salt provisioning
-process.
+## Future Work
+I will be working on integrating the box automatically with the ci server so that you can also run continous builds and tests.
+There are some additional requirements (like ruby 2.0) being installed at the moment but there is some more work to be done for the ci integration to work completely.
